@@ -301,7 +301,7 @@ nav h1 a {
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 0;
-  margin-top: 25px;
+  margin-top: 20px;
   text-transform: uppercase;
   line-height: 1.1;
   text-shadow: 2px 2px#D3D3D3;
@@ -407,23 +407,43 @@ nav h1 a {
   align-items: center;
 }
 #reviews-list li {
-  background-color: #fff;
+  background-color: #d3d3d3;
   border: 2px solid #f3f3f3;
   display: block;
+  font-size: 15px;
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
-  position: relative;
+  /* position: relative; */
   width: 86%;
-  border-radius: 10px;
+  display: grid;
+  grid-template-rows: auto;
+  border-radius: 20px;
+   box-shadow: 5px 10px #888888;
 }
 #reviews-list li p {
   margin: 0 0 10px;
 }
-#reviews-list li p:first-child {
-  background: red;
-} 
+
+.review-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #272727;
+  padding: 5px;
+}
+
+.review-rating {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #5fa6d6;
+}
+
+.review-comments{
+  font-style: italic;
+}
+
 #maincontent-top {
   display: flex;
   flex-direction: column;
