@@ -288,7 +288,13 @@ nav h1 a {
 #restaurant-container {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "hero hero hero" "img img cusine" "img img address" "img img hours"
+  margin: 0 100px;
+  grid-template-areas: "hero hero" "img restaurant-stuff";
+}
+
+.restaurant-stuff{
+display: flex;
+flex-direction: column;
 }
 
 #restaurant-name {
@@ -305,38 +311,50 @@ nav h1 a {
   text-align: center;
 }
 #restaurant-img {
-  width: 70%;
+  width: 100%;
   grid-area: img;
   /* background-size: cover; */
   /* margin-left: 40px; */
 }
 #restaurant-address {
-  font-size: 12pt;
+  font-size: 16pt;
   margin: 10px 0px;
-  grid-area: address;
-  text-align: center;
+  grid-area: restaurant-stuff;
+  text-align: left;
+  font-weight: bold;
+  margin: 50px 0;
 }
 #restaurant-cuisine {
-  grid-area: cusine;
+  grid-area: stuff;
   background-color: #333;
   color: #ddd;
   font-size: 12pt;
-  font-weight: 300;
+  font-weight: bold;
   letter-spacing: 10px;
   margin: 0 0 20px;
-  padding: 10px 0;
+  padding: 20px 0;
   height: 40px;
   text-align: center;
   text-transform: uppercase;
-  /* width: 90%; */
 }
 
 #restaurant-hours {
-  align-items: flex-start;
-  grid-area: hours
+  grid-area: restaurant-stuff;
+  width: 100%;
 }
 #restaurant-hours td {
   color: #272727;
+  font-size: 16px;
+}
+
+/* mediq queries */
+@media (max-width: 1200px){
+  #restaurant-container {
+  display: grid;
+  grid-gap: 20px;
+  margin: 30px;
+  grid-template-areas: "hero" "img" "restaurant-stuff";
+}
 }
 
 /* ===========================================================Reviews================================== */
@@ -346,6 +364,7 @@ nav h1 a {
   align-items: center;
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
+  margin-top: 10px;
 }
 
 #reviews-container h2 {
@@ -354,6 +373,7 @@ nav h1 a {
   font-weight: bold;
   letter-spacing: -1px;
   padding-bottom: 1pt;
+  margin-top: 10px;
   text-transform: uppercase;
 }
 #reviews-list {
@@ -372,7 +392,7 @@ nav h1 a {
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 85%;
+  width: 86%;
   border-radius: 10px;
 }
 #reviews-list li p {
