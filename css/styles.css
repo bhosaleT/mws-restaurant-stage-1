@@ -158,21 +158,22 @@ nav h1 a {
   display: flex;
   width: 100%;
   background-color: #272727;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   flex-direction: column;
   align-items: center;
 }
 
-.filter-heading {
+/* .filter-heading {
   text-align: center;
-}
+} */
 
 .filter-options h2 {
   color: white;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  width: 32%;
+  /* margin: 10px 20px; */
 }
 
 .filter-options select {
@@ -420,7 +421,7 @@ nav h1 a {
   display: grid;
   grid-template-rows: auto;
   border-radius: 20px;
-   box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px #888888;
 }
 #reviews-list li p {
   margin: 0 0 10px;
