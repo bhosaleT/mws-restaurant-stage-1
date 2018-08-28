@@ -57,6 +57,19 @@ section,
 summery {
   display: block;
 }
+/* Hidden positioning of the skip link  */
+.skip-link {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+.skip-link:focus {
+  top: 0;
+}
 
 #maincontent {
   background-color: #f3f3f3;
@@ -285,7 +298,7 @@ nav h1 a {
 }
 #restaurant-container {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 25px;
   margin: 0 100px;
   grid-template-areas: "hero hero" "img restaurant-stuff";
 }
@@ -312,7 +325,7 @@ nav h1 a {
 #restaurant-img {
   width: 100%;
   grid-area: img;
-  /* background-size: cover; */
+  background-size: cover;
   /* margin-left: 40px; */
 }
 #restaurant-address {
@@ -349,14 +362,14 @@ nav h1 a {
 
 #restaurant-hours td {
   color: #272727;
-  font-size: 22px;
+  font-size: 17px;
   /* border: 1px solid #ccc; */
   background: #f3f3f3;
 }
 
 #restaurant-hours td:nth-child(1) {
   color: #272727;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 400;
   /* border: 1px solid #ccc; */
   background: #d3d3d3;
@@ -371,13 +384,13 @@ nav h1 a {
     grid-template-areas: "hero" "img" "restaurant-stuff";
   }
   #restaurant-hours td {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 700px) {
   #restaurant-hours td {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
