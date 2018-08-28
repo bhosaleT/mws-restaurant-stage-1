@@ -4,11 +4,6 @@ let restaurants,
 var newMap
 var markers = []
 
-// service worker registration.
-
-
-
-
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
