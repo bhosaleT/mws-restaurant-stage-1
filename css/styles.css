@@ -143,42 +143,15 @@ nav h1 a {
   background-color: #ccc;
 }
 
-#maincontent #map-container {
-  height: 400px;
-  width: 100%;
-  background-color: #ccc;
-}
-
-#maincontent-top > #map-container,
-#maincontent-top > #map-container > #map {
-  height: 200px;
-}
-.inside #map-container {
-  background: black none repeat scroll 0 0;
-  width: 100%;
-}
-
-@media (min-width: 700px) {
-  #maincontent-top > #map-container,
-  #maincontent-top > #map-container > #map {
-    height: 660px;
-  }
-}
-
 /* ====================== Restaurant Filtering ====================== */
 /* adding flex box to the filter options to make it center and collapse when in mobile mode */
 .filter-options {
   display: flex;
   width: 100%;
   background-color: #272727;
-  /* flex-grow: 1; */
   flex-direction: column;
   align-items: center;
 }
-
-/* .filter-heading {
-  text-align: center;
-} */
 
 .filter-options h2 {
   color: white;
@@ -204,14 +177,14 @@ nav h1 a {
 
 .filter-heading {
   text-align: center;
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 /* Media queries to make the restaurants list responsive */
 
-@media (min-width: 481px) {
+@media (min-width: 500px) {
   .filter-options {
     flex-direction: row;
   }
@@ -376,7 +349,7 @@ nav h1 a {
 }
 
 /* mediq queries */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   #restaurant-container {
     display: grid;
     grid-gap: 20px;
@@ -431,10 +404,10 @@ nav h1 a {
   padding: 0 20px 20px;
   /* position: relative; */
   width: 86%;
-  display: grid;
-  grid-template-rows: auto;
+  /* display: grid;
+  grid-template-rows: auto; */
   border-radius: 20px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 3px 7px #888888;
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -457,14 +430,4 @@ nav h1 a {
 .review-comments{
   font-style: italic;
 }
-
-#maincontent-top {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 700px) {
-  #maincontent-top {
-    flex-direction: row-reverse;
-  }
-}
+/*
