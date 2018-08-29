@@ -29,28 +29,33 @@ self.addEventListener("install", event => {
   );
 });
 
-self.addEventListener("fetch", function(event) {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      if (response) {
-        return response;
-      }
+self.addEventListener('fetch',
+  function (event) {
+    event.respondWith(
+      caches.match(event.request)
+      .then(
+        function (response) {
+          if (response !== undefined) {
+            return response;
+          } else {
+            return fetch(event.request).then(
+              function (response) {
+                let responseClone = response.clone();
 
-      var fetchRequest = event.request.clone();
-
-      return fetch(fetchRequest).then(function(response) {
-        if (!response || response.status !== 200 || response.type !== "basic") {
-          return response;
+                caches.open(cacheName)
+                  .then(
+                    function (cache) {
+                      cache.put(event.request, responseClone);
+                    }
+                  );
+                return response;
+              }
+            );
+          }
         }
-          var responseToCache = response.clone();
+      ) // end of promise for cache match
 
-          caches.open(cacheName)
-              .then(function (cache) {
-                  cache.put(event.request, responseToCache);
-              });
+    ); // end of respond with
 
-          return response;
-      });
-    })
-  );
-});
+  }
+);
